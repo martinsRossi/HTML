@@ -1,0 +1,28 @@
+<meta charset="UTF-8">
+
+<input/>
+<button>Try to guess my password!</button>
+
+<script>
+    
+    var password = Math.round(Math.random()*10);
+    var input = document.querySelector("input");
+    input.focus();
+
+   function verify () {
+
+        if (input.value == password) {
+            alert("YOU GOT IT RIGHT!");
+             password = Math.round(Math.random()*10);
+        } else {
+            alert("Noop...");
+        }
+        input.value="";
+        input.focus();
+   } 
+
+   var button = document.querySelector("button");
+   
+   button.onclick = verify;
+
+</script>
